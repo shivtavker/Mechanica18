@@ -1,0 +1,17 @@
+<div style="width:100%; height:100%;" *ngIf="!startLaunch">
+        <div>
+               <video autoplay muted loop class="video">
+                   <source src="./fireworks.mp4" type="video/mp4">
+               </video>
+        </div>
+
+        <div id="buttoncontainer">
+               <button class="myButton" (click)="launch()">Launch</button>
+        </div>
+</div>
+
+<div>
+               <video autoplay muted loop class="video" *ngIf="startLaunch">
+                   <source src="./afterLaunch.mp4" type="video/mp4">
+               </video>
+</div>

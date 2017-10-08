@@ -1,0 +1,23 @@
+.container{
+    /*background-image: url(../../Images/HyperLoop.jpg);*/
+
+    text-align: center;
+    color: white;
+    font-family: Arial;
+    font-style: italic;
+}
+            
+.container header{
+    font-size: 40px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+.container section{
+    margin-top: 50px;
+    text-align: left;
+}
+            
+.container section a{
+    color: black;
+}

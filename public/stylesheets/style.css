@@ -2,11 +2,22 @@
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }*/
-body{
-  background-image: url('/js/app/HyperLoop.jpg');
+html,body{
+  height: 100%;
+  width: 100%;
+}
+
+.loaded{
+  background-image: url('/images/HyperLoop.jpg');
+  background-position: center center;
   background-repeat: no-repeat;
-  background-size: cover;
   background-attachment: fixed;
+  background-size: cover;
+}
+
+.customBody{
+  min-width: 100vw;
+  min-height: 100vh;
 }
 
 a {
@@ -30,4 +41,10 @@ a.danger {
 
 input.ng-invalid.ng-touched {
   border: 1px solid red;
+}
+
+.loader{
+  position: absolute;
+  left: 43%;
+  top: 35%;
 }

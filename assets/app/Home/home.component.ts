@@ -3,9 +3,14 @@ import {Component} from '@angular/core';
 @Component({
     selector:'home-component',
     templateUrl:'./home.html',
-    styleUrls: ['./home.css']
+    styleUrls: ['../../../public/stylesheets/home.css']
 })
 
 export class HomeComponent{
 
+isLoaded = false;    
+    
+    ngOnInit(){
+        this.isLoaded = true;
+    }
 }

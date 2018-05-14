@@ -1,0 +1,112 @@
+<div class="customBody container">
+
+    <h2 style="margin-top: 70px;
+            margin-bottom: 30px;
+            text-align: center;
+            color: white;
+            font-weight: bold;">
+            Event Wise Registrations -- {{eventNames[eventToDisplay - 1201]}}
+    </h2>
+
+    <ul class="nav nav-pills">
+        <li routerLinkActive="active"><a [routerLink]="" (click)="showEvent(1201)">1201</a></li>
+        <li routerLinkActive="active"><a [routerLink]="" (click)="showEvent(1202)">1202</a></li>
+        <li routerLinkActive="active"><a [routerLink]="" (click)="showEvent(1203)">1203</a></li>
+        <li routerLinkActive="active"><a [routerLink]="" (click)="showEvent(1204)">1204</a></li>
+        <li routerLinkActive="active"><a [routerLink]="" (click)="showEvent(1205)">1205</a></li>
+        <li routerLinkActive="active"><a [routerLink]="" (click)="showEvent(1206)">1206</a></li>
+        <li routerLinkActive="active"><a [routerLink]="" (click)="showEvent(1207)">1207</a></li>
+        <li routerLinkActive="active"><a [routerLink]="" (click)="showEvent(1208)">1208</a></li>
+        <li routerLinkActive="active"><a [routerLink]="" (click)="showEvent(1209)">1209</a></li>
+        <li routerLinkActive="active"><a [routerLink]="" (click)="showEvent(1210)">1210</a></li>
+        <li routerLinkActive="active"><a [routerLink]="" (click)="showEvent(1211)">1211</a></li>
+        <li routerLinkActive="active"><a [routerLink]="" (click)="showEvent(1212)">1212</a></li>
+        <li routerLinkActive="active"><a [routerLink]="" (click)="showEvent(1213)">1213</a></li>
+        <li routerLinkActive="active"><a [routerLink]="" (click)="showEvent(1214)">1214</a></li>
+        <li routerLinkActive="active"><a [routerLink]="" (click)="showEvent(1215)">1215</a></li>
+        <li routerLinkActive="active"><a [routerLink]="" (click)="showEvent(1216)">1216</a></li>
+        <li routerLinkActive="active"><a [routerLink]="" (click)="showEvent(1217)">1217</a></li>
+        <li routerLinkActive="active"><a [routerLink]="" (click)="showEvent(1218)">1218</a></li>
+    </ul>
+    
+    <div class="gear" *ngIf="gear"></div>
+
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <table class="minimalistBlack">
+            <thead>
+                <tr>
+                    <th>SNo</th>
+                    <th>MechanicaID</th>
+                    <th>Email</th>
+                    <th>Name</th>
+                    <th>Rollno</th>
+                    <th>College</th>
+                    <th>Accomodation</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let user of users; let i = index;">
+                    <template [ngIf]="userRegistered(user.RegisteredIDs,user._id)">
+                        <td>{{i+1}}</td>
+                        <td>{{user.MechanicaID}}</td>
+                        <td>{{user.Email}}</td>
+                        <td>{{user.Name}}</td>
+                        <td>{{user.Rollno}}</td>
+                        <td>{{user.College}}</td>
+                        <td>{{user.Accomodation}}</td>
+                    </template>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+    
+    
+    <h2 style="margin-top: 70px;
+            margin-bottom: 30px;
+            text-align: center;
+            color: white;
+            font-weight: bold;">
+            Registrations
+    </h2>
+
+    <div class="gear" *ngIf="gear"></div>
+
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <table class="minimalistBlack">
+            <thead>
+                <tr>
+                    <th>SNo</th>
+                    <th>MechanicaID</th>
+                    <th>TimeStamp</th>
+                    <th>Email</th>
+                    <th>Name</th>
+                    <th>Rollno</th>
+                    <th>College</th>
+                    <th>Attending Mechanica</th>
+                    <th>Accomodation</th>
+                    <th>RegisteredIds</th>
+                    <th>No. RegisteredIDs</th>
+                    <th>Publicity</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let user of users; let i = index;">
+                    <td>{{i+1}}</td>
+                    <td>{{user.MechanicaID}}</td>
+                    <!--<td>{{user._id.toString().substring(0,8)}}</td>-->
+                    <td>{{getTimeStamp(user)}}</td>
+                    <td>{{user.Email}}</td>
+                    <td>{{user.Name}}</td>
+                    <td>{{user.Rollno}}</td>
+                    <td>{{user.College}}</td>
+                    <td>{{user.AttendingMechanica}}</td>
+                    <td>{{user.Accomodation}}</td>
+                    <td>{{user.RegisteredIDs}}</td>
+                    <td>{{user.__v}}</td>
+                    <td>{{user.Publicity}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

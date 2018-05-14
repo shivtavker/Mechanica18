@@ -1,0 +1,35 @@
+.spons-header {
+    border: 2px solid black;
+    text-align: center;
+    background-color: black;
+    color: white;
+    /*width: 97%;*/
+    /* left: 0px; */
+    top: 60px;
+}
+
+.spons-body {
+    border: 2px solid black;
+    text-align: center;
+    background-color:white;
+    color: white;
+    /*width: 97%;*/
+    /* left: 0px; */
+    top: 60px;
+    color: black;
+}
+
+.logo-image {
+    height: 115px;
+    max-width: 100%;
+}
+
+.logo-image2 {
+    height: 90px;
+    max-width: 100%;
+}
+
+.logo-container {
+    text-align: center;
+    margin-bottom: 40px;
+}

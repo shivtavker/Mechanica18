@@ -1,0 +1,46 @@
+<div class="subscribeForm">
+    <form (ngSubmit)="subscribe(form)" #form="ngForm">
+        <h1>Sign Up</h1>
+        
+        <fieldset>
+          <label for="name">Name:</label>
+          <input type="text" name="name" #name>
+          
+          <label for="mail">Email:</label>
+          <input type="email" name="email" #email>
+          
+          <label for="password">Password:</label>
+          <input type="password" name="password" #password>
+          
+          <label for="confirmpassword">Confirm Password:</label>
+          <input type="password" name="confirmpassword" #confirmpass>
+
+          <label for="college">College:</label>
+          <input type="text" name="college" #college>
+
+          <label for="rollno">Roll NO:</label>
+          <input type="text" name="rollno" #rollno>
+          
+          <label>Are you planning to attend Mechanica?</label>
+          <input type="radio" value="yes" name="attend" checked #yesAttendMechanica><label for="yes" class="light">Yes</label><br>
+          <input type="radio" value="maybe" name="attend" #maybeAttendMechanica><label for="maybe" class="light">May Be</label><br />
+          <input type="radio" value="no" name="attend" #noAttendMechanica><label for="no" class="light">No</label><br />
+          
+          <label *ngIf="!(noAttendMechanica.checked)">Need Accomodation:</label>
+          <input type="radio" value="false" name="accomodation" *ngIf="!(noAttendMechanica.checked)" #noAccomodation><label *ngIf="!(noAttendMechanica.checked)" for="under_13" class="light">NO</label><br>
+          <input type="radio" value="true" name="accomodation" *ngIf="!(noAttendMechanica.checked)" #yesAccomodation><label *ngIf="!(noAttendMechanica.checked)" for="over_13" class="light">Yes</label><br />
+        
+          <label>How did you get to know about Mechanica?</label>
+          <select name="publicity" #publicity>
+            <option value="facebook" selected>Facebook</option>
+            <option value="college notice board">College Notice Board</option>
+            <option value="whatsapp">Whatsapp</option>
+            <option value="instagram">Instagram</option>
+            <option value="campus ambassador">Campus Ambassador</option>
+          </select>
+        
+        </fieldset>
+        
+        <button type="submit">Sign Up</button>
+    </form>
+</div>

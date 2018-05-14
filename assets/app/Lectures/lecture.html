@@ -1,0 +1,92 @@
+<div class="customBody">
+
+    <h2 style="margin-top: 70px;
+            margin-bottom: 30px;
+            text-align: center;
+            color: white;
+            font-weight: bold;">
+            Mechanica Vision Series <br />
+            <span style="font-size:18px;">(Certificates will be provided to all participants)</span>
+    </h2>
+
+    <div class="gear" *ngIf="gear"></div>
+
+    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4" *ngFor="let lecture of lectures">
+        <div class="my-2 mx-auto p-relative bg-white shadow-1 blue-hover card" style="width: 280px; overflow: hidden; border-radius: 1px;">
+            <img [src]="lecture.LectureImage" alt="Lecture Image"    
+                class="d-block w-full image">
+
+            <div class="px-2 py-2">
+                <h1 class="ff-serif font-weight-normal text-black card-heading mt-0 mb-1" style="line-height: 1.25;">
+                {{lecture.LectureTitle}}
+                </h1>
+                <p class="mb-1">
+                    {{lecture.LectureInfo}} <br />
+
+                    <span class="date">
+                        <h4><span class="glyphicon glyphicon-calendar"></span> {{lecture.LectureDate}}</h4>
+                    </span>
+                </p>
+            </div>
+
+            <button (click)="showDetails(lecture.LectureTitle, lecture.LectureDesc, lecture.LectureID)" data-toggle="modal" data-target="#exampleModalLong" class="text-uppercase d-inline-block font-weight-medium lts-2px ml-2 mb-2 text-center styled-button">
+                More Details
+            </button>
+            
+            <button (click)="registerEvent(lecture.LectureID)" class="text-uppercase d-inline-block font-weight-medium lts-2px ml-2 mb-2 text-center styled-button">
+                Register
+            </button>
+
+        </div>
+
+        <div class="detail">
+            <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                <div class="modal-dialog modal-lg" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h3 class="modal-title" id="exampleModalLongTitle">{{lectureToDisplay.Title}}</h3>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body" [innerHTML]="lectureToDisplay.Description">
+                        </div>
+                        <div class="modal-footer">
+                            <button class="btn btn-primary" data-dismiss="modal">Register</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+<!--<div class="col-xs-12 col-sm-6 col-lg-4">
+    <div class="my-2 mx-auto p-relative bg-white shadow-1 blue-hover card" style="width: 280px; overflow: hidden; border-radius: 1px;">
+        <img src="http://gdurl.com/vmRh" alt="MatLab"    
+            class="d-block w-full image">
+
+  <div class="px-2 py-2">
+
+    <h1 class="ff-serif font-weight-normal text-black card-heading mt-0 mb-1" style="line-height: 1.25;">
+      Matlab
+    </h1>
+
+    <p class="mb-1">
+        Matlab workshop mainly focuses on the student
+        eager to learn about Matrix Laboratory which is a high-level language.
+
+        <span class="date">
+            <h4><span class="glyphicon glyphicon-calendar"></span> Mar 11, 2018</h4>
+        </span>
+    </p>
+
+  </div>
+
+  <a href="https://www.instamojo.com/mechanica2018/" target="_blank" class="text-uppercase d-inline-block font-weight-medium lts-2px ml-2 mb-2 text-center styled-link">
+    Register
+  </a>
+
+       
+
+</div>-->
+</div>

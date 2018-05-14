@@ -1,0 +1,58 @@
+/* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+
+.map-container{
+position: absolute;
+height: 100%;
+width: 100%;
+top: 10px;
+}
+#map {
+        height: calc(100% - 103px);
+        position: relative;
+        top: 85px;
+      }
+
+      .list-group-item{
+        background-color: black;
+        color: white;
+        cursor: pointer;
+      }
+
+@media screen and (max-width: 1389px){
+    #map{
+        top:70px;
+        height: calc(100% - 70px);
+    }
+    #overlay{
+        margin-top: 70px;
+    }
+}
+
+@media screen and (max-width: 1389px){
+    #map{
+        /*top:70px;*/
+    }
+}
+@media screen and (max-width: 1000px){
+    #overlay{
+        height:110px;
+    }
+}
+#overlay::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.6);
+	background-color: #CCCCCC;
+}
+
+#overlay::-webkit-scrollbar
+{
+	width: 10px;
+	background-color: #F5F5F5;
+}
+
+#overlay::-webkit-scrollbar-thumb
+{
+	background-color: #FFF;
+	background-image: -webkit-linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 25%, transparent 100%, rgba(0, 0, 0, 1) 75%,	transparent);
+}

@@ -1,0 +1,181 @@
+.customBody{
+    position: relative;
+}
+
+main{
+    position: relative;
+    top: 0px;
+    width: 100%;
+    height: calc(100vh - 51px);
+    left: 0px;
+}
+
+nav{
+    z-index: 1;
+    font-size: 20px;
+}
+
+header{
+    height: 80px;
+    width: 100%;
+    color: white;
+    display: inline-block;
+}
+
+header img{
+    position: fixed;
+    margin-left: 2%;
+    height: 80px;
+    z-index: 1;
+    float: left !important;
+}
+
+.nav a{
+    cursor: pointer;
+    z-index: 1;
+}
+
+.navbar{
+    margin-bottom: 0px;
+}
+
+.navbar-height{
+    height: 51px;
+}
+
+.navbar-inverse{
+    background-color: rgba(0,48,95,0.75);
+    border-color: rgba(0,48,95,0.75);
+}
+
+.navbar-inverse .navbar-nav>li>a{
+    color: #e0e0e0;
+    font-weight: bold;
+    font-size: 17px !important;
+}
+
+.logoImage{
+    height: 100px;
+    width: auto;
+    position: absolute;
+    top: -86px;
+    left: calc(22.5% - 250px);
+    filter: brightness(0)invert(1);
+}
+
+.logos{
+    width: 100vw;
+    height: 55px;
+    position: fixed;
+    bottom: 0px;
+    z-index: 1;
+}
+
+.logos img{
+    height: 100%;
+}
+
+.logos i{
+    float: right;
+}
+
+.mealogo{
+    float: left;
+    margin-right: 35px;
+}
+
+.iitmlogo{
+    float: left;
+}
+
+.facebooklogo{
+    float: right;
+    height: 44px !important;
+    position: relative;
+    bottom: -8px;
+}
+
+/* ------- Arrow ------- */
+
+.arrow_box {
+	position: relative;
+	background: #fff;
+	border: 2px solid #fff;
+    border-radius: 6px;
+    width: 25%;
+    float: right;
+    top: 27px;
+}
+
+.arrow_box ul{
+    list-style: none;
+    width: 100%;
+    padding: 0px;
+    padding-top: 8px;
+    padding-left: 10px;
+}
+
+.arrow_box ul li{
+    margin-bottom: 4px;
+}
+
+.arrow_box:after, .arrow_box:before {
+	bottom: 100%;
+	left: 50%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+
+.arrow_box:after {
+	border-color: rgba(255, 255, 255, 0);
+	border-bottom-color: #fff;
+	border-width: 25px;
+	margin-left: -30px;
+}
+.arrow_box:before {
+	border-color: rgba(255, 255, 255, 0);
+	border-bottom-color: #fff;
+	border-width: 24px;
+	margin-left: -29px;
+}
+
+
+/*@media screen and (min-width: 1000px){
+    
+    .centerIT{
+        position: absolute;
+        left: calc(50% - 302px);
+    }
+
+}*/
+
+/*@media screen and (min-width: 768px){
+    .navbar-nav>li>a{
+        padding-top: 16px;
+        padding-bottom: 14px;
+    }
+}*/
+
+/*@media screen and (max-width: 770px){
+    .navbar-collapse{
+        margin-left: -16px;
+    }
+    
+    .navbar-nav{
+        background-color: #222222;
+        margin: 1px -15px;
+    }
+    
+    .logoImage{
+        top: -90px !important;
+        left: calc(50% - 116px);
+    }
+
+    .navbar-right{
+        margin-top: -3px;
+    }
+}*/

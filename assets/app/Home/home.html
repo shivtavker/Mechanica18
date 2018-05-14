@@ -1,0 +1,92 @@
+<div *ngIf="DesktopView()" class="bgimage">
+    <video autoplay muted loop id="myVideo">
+        <source src="../../images/bgvideo.mp4" type="video/mp4">
+    </video>
+</div>
+
+<div *ngIf="!DesktopView()" class="mobilebgimage">
+</div>
+
+
+<div class="customBody">
+    <div class="loaded">   
+    </div>
+
+     <!-- Initial Code for Refrence -->
+
+        <!--<div class="row">
+            <div class="col-md-12">
+                <img src="../../../public/images/logo.png" class="logoImage">
+                <header>We're coming soon!!</header>
+                <p class="ComingSoonText">
+                    We are working very hard on the new version of our site.<br />
+                    It will bring a lot of new features. Stay Tuned!!
+                </p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="subscribeForm">
+                    <form (ngSubmit)="subscribe(form)" #form="ngForm">
+                        <input type="email" 
+                               class="subscribeTextBox" 
+                               placeholder="e.g. crank@gear.com" 
+                               name="email" 
+                               ngModel
+                               required
+                               />
+                        <button class="button" type="submit">Subscribe!!</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div id="razorPay">
+            <button id="rzp-button1" (click)="payEvent()">Pay</button>
+        </div>
+
+        <div class="row">
+            <section class="col-md-7 col-md-offset-2">
+                <h2>Tech2Farm - Mechanica's Flagship Event</h2>
+                <h4>
+                    <b>Looking for problems to solve? Dreaming to make an impact?</b> 
+                    Then, this event is for you. 
+                </h4>
+                <h4><a href="https://goo.gl/forms/O1j9veWRCe831wgi1" style="color: #329cc9">REGISTER HERE!!</a></h4>
+                <br />
+                <h4>Check Problem Statement <a [routerLink]="['/tech2farm']" style="color: Red">HERE!!</a></h4>
+            </section>
+        </div>-->
+
+    <div id="snackbar" class="shiv" *ngIf="false" #snackbar>{{notification}}</div>
+
+    <div *ngIf="alertShow" class="alert alert-info alert-dismissable customAlert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+        <h2 class="text-center alert-header">Notifications</h2>
+        <ul class="notification-list">
+            <li *ngFor="let notification of notifications">{{notification.Notification}}</li>
+        </ul>
+    </div> 
+
+    <div id="muskified">
+        <h1 style="font-weight:bold;">{{logo}}</h1>
+    </div>
+
+    <div id="quote">
+        <h1>{{quote}}</h1>
+    </div>
+
+    <div class="col-xs-12 col-sm-12 col-md-10 col-lg-10 col-md-offset-1 col-lg-offset-1 aboutus">
+        <div class="header-aboutus text-center">
+            <h1>About Us</h1>
+        </div>
+        <div class="body-aboutus">
+            <p>Scheduled to be held from 9-11 of  March 2018, Mechanica boasts of being one of the finest technical department fests in the country. Our stages were graced by some of the biggest names in the industry and academia as well as the brightest young minds from across the country.</p>
+            <p>Mechanica 2018 is going to be the biggest edition ever, both in quality and quantity of participation.</p>
+            <p>The Mechanical Engineering Association (MEA) was formed with the primary aim of exposing future Mechanical Engineers to the challenges of the real world. With both faculty and students as its members, the organization is one of the most active Mechanical Engineering Associations in India. We provide much-needed exposure to real-life engineering problems, both technical as well as the managerial kind by organizing Mechanica - the annual fest of our department, industrial tours, lectures on topics of general interest and seminars of specific interest etc.Over the years, it has built its own legacy and reputation of being a platform for fostering brotherhood among the Mechanical Engineering fraternity across the nation.</p>
+        </div>
+    </div>
+</div>

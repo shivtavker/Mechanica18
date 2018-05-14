@@ -1,0 +1,15 @@
+<div class="subscribeForm">
+    <form (ngSubmit)="login(form)" #form="ngForm">
+        <h1>Login</h1>
+        
+        <fieldset>
+          <label for="mail">Email:</label>
+          <input type="email" id="mail" name="email" #email>
+          
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" #password>
+        </fieldset>
+        
+        <button type="submit">Login</button>
+    </form>
+</div>

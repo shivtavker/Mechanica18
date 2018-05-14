@@ -1,0 +1,64 @@
+<div class="customBody">
+
+    <h2 style="margin-top: 70px;
+            margin-bottom: 30px;
+            text-align: center;
+            color: white;
+            font-weight: bold;">
+            Events
+    </h2>
+
+    <div class="gear" *ngIf="gear"></div>
+
+    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4" *ngFor="let event of events">
+        <div class="my-2 mx-auto p-relative bg-white shadow-1 blue-hover card" style="width: 280px; overflow: hidden; border-radius: 1px;">
+            <img [src]="event.EventImage" alt="Event Image"    
+                class="d-block w-full image">
+
+            <div class="px-2 py-2">
+                <h1 class="ff-serif font-weight-normal text-black card-heading mt-0 mb-1" style="line-height: 1.25;">
+                {{event.EventTitle}}
+                </h1>
+                <p class="mb-1">
+                    {{event.EventInfo}} <br />
+
+                    <span class="date">
+                        <h4><span class="glyphicon glyphicon-calendar"></span> &nbsp; {{event.EventDate}}</h4>
+                    </span>
+                    <span class="date">
+                        <h4><span class="glyphicon glyphicon-home"></span> &nbsp; {{event.EventVenue}}</h4>
+                    </span>
+                </p>
+            </div>
+
+            <button (click)="showDetails(event.EventTitle, event.EventFullDesc, event.EventID)" data-toggle="modal" data-target="#exampleModalLong" class="text-uppercase d-inline-block font-weight-medium lts-2px ml-2 mb-2 text-center styled-button">
+                More Details
+            </button>
+            
+            <button (click)="registerEvent(event.EventID)" class="text-uppercase d-inline-block font-weight-medium lts-2px ml-2 mb-2 text-center styled-button">
+                Register
+            </button>
+        </div>
+    </div>
+
+    <div class="detail">
+        <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h3 class="modal-title" id="exampleModalLongTitle">{{eventToDisplay.Title}}</h3>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body" [innerHTML]="eventToDisplay.Description">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal" (click)="registerEvent(eventToDisplay.ID)">Register</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

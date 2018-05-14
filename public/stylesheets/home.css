@@ -1,0 +1,204 @@
+#myVideo{
+	width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    object-fit: cover;
+    z-index: -10 !important;
+}
+
+.customBody{
+	width: 100%;
+    height: calc(100% - 50px);
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+#muskified{
+	color: white;
+	position: absolute;
+	top: 60%;
+	left: calc(50% - 133px);
+	text-align: center;
+	width: 266px;
+	text-transform: uppercase;
+}
+
+#muskified h1{
+	background-color: rgba(10, 10, 0, 0.68);
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+#quote{
+	position: absolute;
+	top: 70%;
+	width: 100%;
+	word-spacing: 5px;
+	text-align: center;
+	color: white;
+	text-transform: uppercase;
+}
+
+#quote h1{
+	font-size: 28px;
+}
+
+.aboutus{
+	position: absolute;
+    top: 100vh;
+    margin-bottom: 60px;
+	margin-top: 40px;
+}
+
+.header-aboutus{
+    font-size: 250%;
+    border: 3px solid rgb(30, 8, 119);
+    text-align: center;
+    /*width: 51.24vw;*/
+    background-color: rgb(30, 8, 119);
+    color: white;
+    margin-bottom: 0px;
+}
+
+.header-aboutus h1{
+	font-weight: bold;
+}
+
+.body-aboutus{
+    font-size: 2rem;
+    padding: 10px;
+    color: rgb(30, 8, 119);
+    border: 3px solid rgb(30, 8, 119);
+    margin-top: 0px;
+    /*padding: 0.73vw;*/
+    /*width: 49.78vw;*/
+    background-color: rgba(240, 244, 245, 0.7);
+	word-break: break-all;
+}
+
+/* SnackBar */
+
+.customAlert {
+    position: fixed;
+    left: 5%;
+    width: 90%;
+    max-width: 90%;
+    margin-top: 100px;
+    z-index: 1000000;
+}
+
+.notification-list {
+    margin-top: 20px;
+    color: black;
+    font-size: 2rem;
+}
+
+.alert-header{
+    margin-top: 0px !important;
+    color: black;
+    font-weight: bold;
+}
+
+.alert-dismissable .close {
+    right: -15px !important;
+    color: red;
+}
+
+.close {
+    font-size: 30px !important;
+    opacity: 0.6 !important;
+}
+
+.alert-info {
+    background-color: #b3afaf !important;
+    border-color: #b3afaf !important;
+}
+
+#snackbar {
+    visibility: hidden;  /*Hidden by default. Visible on click */
+    min-width: 250px; /* Set a default minimum width */
+	max-width: 500px; /* Set a default maximum width */
+    background-color: #333; /* Black background color */
+    color: #fff; /* White text color */
+    text-align: center; /* Centered text */
+    border-radius: 2px; /* Rounded borders */
+    padding: 10px; /* Padding */
+    position: fixed; /* Sit on top of the screen */
+    z-index: 1; /* Add a z-index if needed */
+    right: 0px; /* Align the snackbar */
+    top: 46%; 
+    font-weight: bold;
+    font-size: 20px;
+    word-spacing: 3px;
+}
+
+/* Show the snackbar when clicking on a button (class added with JavaScript) */
+#snackbar.show {
+    visibility: visible; /* Show the snackbar */
+
+/* Add animation: Take 0.5 seconds to fade in and out the snackbar. 
+However, delay the fade out process for 2.5 seconds */
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+/* Animations to fade the snackbar in and out */
+@-webkit-keyframes fadein {
+    from {right: 0px; opacity: 0;} 
+    to {right: 0px; opacity: 1;}
+}
+
+@keyframes fadein {
+    from {right: 0px; opacity: 0;}
+    to {right: 0px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+    from {right: 0px; opacity: 1;} 
+    to {right: 0px; opacity: 0;}
+}
+
+@keyframes fadeout {
+    from {right: 0px; opacity: 1;}
+    to {right: 0px; opacity: 0;}
+}
+
+
+/*@media screen and (min-width: 760px){
+	.bgimage{
+		z-index: -1;
+		width: 100%;
+		height: 100vh;
+		position: absolute; 
+		top:0px; 
+		left:0px; 
+		object-fit:cover;
+	}
+
+	#muskified{
+		width: 580px !important;
+		left: calc(50% - 290px) !important;
+	}
+
+	#muskified h1{
+		font-size: 80px;
+		font-weight: bold;
+	}
+
+	#quote{
+		top: 78% !important;
+	}
+}*/
+
+/*@media screen and (max-width: 760px){
+	.bgimage{
+		z-index: -1;
+		width: 100%;
+		position: absolute;
+		top: calc(50vh - 101px);
+		left: 0px;
+	}
+}*/

@@ -1,0 +1,25 @@
+<div class="body">
+    <h2>Contact Us</h2>
+
+    <div class="gear" *ngIf="gear"></div>
+
+    <div class="col-xs-12 col-sm-6 col-lg-4" *ngFor="let member of members">
+        <div class="square-flip">
+            <div class='square' [ngStyle]="{'background-image': 'url('+member.ImageUrl+')'}">
+                <div class="square-container">
+
+                    <h2 class="textshadow">{{member.Name}}</h2>
+                    <h3 class="textshadow">{{member.Designation}}</h3>
+                </div>
+                <div class="flip-overlay"></div>
+            </div>
+            <div class='square2'>
+                <div class="square-container2">
+                    <div class="align-center"></div>
+                    <p>Contact Number: {{member.MobNo}} <br> Email Id: {{member.Email}}</p>
+                </div>
+                <div class="flip-overlay"></div>
+            </div>
+        </div>
+    </div>
+</div>

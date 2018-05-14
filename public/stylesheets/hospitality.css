@@ -1,0 +1,39 @@
+.description-container{
+    background-color: white;
+    margin-top: 30px;
+    border-radius: 10px;
+}
+
+.description-head{
+    text-align: center;
+    font-size: 2.8rem;
+    margin-top: 10px;
+}
+
+.MainList{
+    padding-left: 30px;
+    font-size: 2rem;
+    margin-top: 30px !important;
+    margin-bottom: 25px !important;
+}
+
+.MainList > li{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.subList{
+    list-style-type: square;
+    margin-top: 5px;
+}
+
+.register-button{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.styled-link{
+    padding: 6px 20px !important;
+    font-size: 20px !important;
+}

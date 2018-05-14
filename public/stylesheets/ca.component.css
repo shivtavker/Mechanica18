@@ -1,0 +1,221 @@
+.container{
+    background-image: url(./assets/back.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    text-align: center;
+}
+
+#myfooter a{
+    text-decoration: none;
+    color: rgb(118, 199, 219);
+}
+
+i:hover {
+    color:red;
+}
+
+
+#myfooter a:visited {
+    color:rgb(118, 199, 219);
+}
+
+#mynavbar a{
+    text-decoration: none;
+    color: inherit;
+}
+
+#mynavbar a:visited{
+    color: inherit;
+}         
+
+.myheading1{
+    text-align:center;
+    font-size: 215%;
+    color: rgb(17, 7, 104);
+}
+            
+.myheading2{
+    text-align: center;
+    color: rgb(17, 7, 104);
+    font-size: 360%;
+    background-color: rgba(240, 244, 245, 0.7);
+    font-weight: 500;
+    border: 3px solid rgb(17, 7, 104);
+    /*width: 51.24vw;*/
+    margin-bottom: 0px;
+}
+
+.mybottomline{
+    margin-top: 0px;
+    font-size: 150%;
+    border: 3px solid rgb(17, 7, 104);
+    /*width: 51.24vw;*/
+    text-align: center;
+    background-color: rgb(17, 7, 104);
+    color: white;
+    letter-spacing: 2px;
+}
+
+#myheading{
+    height: 100vh;
+}
+
+#mydiv1{
+    /*position: relative;*/
+    /*left: 20.2vw;*/
+    display: block;
+    margin-top: 35px;
+    padding: 2px;
+    /*width: 51.61vw;*/
+}
+
+#myfooter{
+    position: fixed;
+    bottom: 0px;
+    left: 0vw;
+    right: 0vw;
+    background-color:rgb(47, 52, 61);
+    text-align: center;
+    letter-spacing: 20px;
+}
+
+.mynormalheading{
+    font-size: 250%;
+    border: 3px solid rgb(17, 7, 104);
+    text-align: center;
+    /*width: 51.24vw;*/
+    background-color: rgb(17, 7, 104);
+    color: white;
+    margin-bottom: 0px;
+}
+
+.mydata{
+    font-size: 120%;
+    padding: 10px;
+    color: rgb(17, 7, 104);
+    border: 3px solid rgb(17, 7, 104);
+    margin-top: 0px;
+    /*padding: 0.73vw;*/
+    /*width: 49.78vw;*/
+    background-color: rgba(240, 244, 245, 0.7); 
+}
+            
+#myabout, #myca{
+    /*position: relative;*/
+    /*left: 20.2vw;*/
+    /*width: 52vw;*/
+    height: 100vh;
+}
+
+#myabout{
+    margin-top: 100px;
+}
+
+#myrespon{
+    /*position: relative;*/
+    /*left: 20.2vw;*/
+    /*width: 52vw;*/
+    height: 90vh;
+}
+
+#myrespon ul{
+    text-align: left;
+}
+
+.myButton {
+    /*position: relative;*/
+    /*left: 45vw;*/
+    /*margin-left: -70px;*/
+    margin-bottom: 50px;
+    top: 100px;
+    background-color:#a73f2d;
+    border:1px solid #241d13;
+    display:inline-block;
+    cursor:pointer;
+    color:#ffffff;
+    font-size: 18px;
+    letter-spacing: 1px;
+    padding:9px 40px;
+    text-decoration:none;
+    text-shadow:0px -1px 0px #7a2a1d;
+}
+
+.navbtn {
+    color: rgb(17, 7, 104);
+    font-size: 150%;
+    background: transparent;
+    padding: 10px 15px 10px 15px;
+    text-decoration: none;
+}
+
+.navbtn:hover {
+    background: rgb(17, 7, 104);
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+}
+
+            #mynavbar{
+                width: 15.37vw;
+                text-align: center;
+                position:fixed;
+                top: 200px;
+                right: 5px;
+            }
+
+@media only screen and (max-width: 768px) {
+
+    .myheading1{
+        font-size: 150%;
+    }
+
+    .myheading2{
+        font-size: 190%;
+    }
+
+    .mybottomline{
+        font-size: 90%;
+    }
+
+    .mynormalheading{
+        font-size: 190%;
+    }
+
+    .mydata{
+        font-size: 100%;
+    }
+
+    .navbtn {
+        font-size: 100%;
+    }
+
+    #mynavbar{
+        display: none;
+    }
+
+    #myabout, #myca{
+        height: 50vh;
+    }
+
+    #myrespon{
+        height: 60vh;
+    }
+
+    .incentives{
+        display: none;
+    }
+
+    .mydata ul{
+        list-style: none;
+        padding-left: 0px;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+
+    .buttonPosi{
+        margin-left: 37% !important;
+    }
+
+}

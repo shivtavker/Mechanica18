@@ -9,8 +9,6 @@ var schema = new Schema({
     Name : {type:String, required: true},
     Rollno : {type:String, required: true},
     College : {type:String, required: true},
-    RegisteredIDs: [{type: Number}],
-    AttendingMechanica : {type:String},
     Accomodation: {type: Boolean},
     Publicity: {type: String}
 });

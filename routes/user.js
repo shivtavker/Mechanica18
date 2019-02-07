@@ -5,18 +5,22 @@ var jwt = require('jsonwebtoken')
 
 var User = require('../models/users');
 
+router.get('/test', function(req, res, next){
+    return res.status(200).json({
+        message: 'Reached ROtue Successfully'
+    });
+});
+
 router.post('/',function(req, res, next){
     
-    // console.log('Hey CAme to post request!!');
+    console.log('Hey CAme to post request!!');
     var MechanicaID = req.body.mechanicaid;
     var Email = req.body.email;
     var Password = bcrypt.hashSync(req.body.password,10);
     var Name = req.body.name;
     var Rollno = req.body.rollno;
     var College = req.body.college;
-    var RegisteredIDs = req.body.id;
     var Accomodation = req.body.accomodation;
-    var AttendingMechanica = req.body.attendingmechanica;
     var Publicity = req.body.publicity;
 
     var user = new User({
@@ -26,8 +30,6 @@ router.post('/',function(req, res, next){
         Name: Name,
         Rollno : Rollno,
         College: College,
-        RegisteredIDs: RegisteredIDs,
-        AttendingMechanica: AttendingMechanica,
         Accomodation: Accomodation,
         Publicity : Publicity
     });
